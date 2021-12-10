@@ -1,17 +1,226 @@
 {% extends "proj_r/base.html" %}
 
 {% block title %}
-    <title>Recharge</title>
+<title>Recharge</title>
 {% endblock %}
 
 {% block body %}
-    <div class="container-fluid">
-        <form>
-            <div class="mb-3">
-              <label for="InputId" class="form-label">Subscriber Id</label>
-              <input type="text" class="form-control" id="InputId">
+<div class="container-fluid">
+    <form method="POST" action="{% url 'proj_r:Recharge' %}">
+        {% csrf_token %}
+        <div class="mb-3">
+            <label for="InputName" class="form-label">Name</label>
+            <input type="text" class="form-control" id="InputName" name="Inputname">
+        </div>
+        <div class="mb-3">
+            <label for="InputId" class="form-label">Subscriber Id</label>
+            <input type="text" class="form-control" id="InputId" name="InputId">
+        </div>
+        <div>Hindi Entertainment</div>
+        <div class="row">
+            <div class="col-3 mb-3">
+                <div class="card" style="width: auto;">
+                    <img src="..." class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Star Plus HD</h5>
+                        <h6 class="card-title">&#8377; 18</h6>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="Star Plus HD" id="starPlusHD" name="starPlusHD">
+                        </div>
+                    </div>
+                </div>
             </div>
-            <button type="submit" class="btn btn-primary">Recharge</button>
-        </form>
-    </div>
+            <div class="col-3 mb-3">
+                <div class="card" style="width: auto;">
+                    <img src="..." class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Zee Tv HD</h5>
+                        <h6 class="card-title">&#8377; 15</h6>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="Zee Tv HD" id="zeeTvHD" name="zeeTvHD">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3 mb-3">
+                <div class="card" style="width: auto;">
+                    <img src="..." class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Colors HD</h5>
+                        <h6 class="card-title">&#8377; 20</h6>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="Colors HD" id="colorsHD" name="colorsHD">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3 mb-3">
+                <div class="card" style="width: auto;">
+                    <img src="..." class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">& Tv HD</h5>
+                        <h6 class="card-title">&#8377; 19</h6>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="& Tv HD" id="&tvHD" name="&tvHD">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div>Marathi Entertainment</div>
+        <div class="row">
+            <div class="col-3 mb-3">
+                <div class="card" style="width: auto;">
+                    <img src="..." class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Zee Marathi HD</h5>
+                        <h6 class="card-title">&#8377; 17</h6>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="Zee Marathi HD" id="zeeMarathiHD" name="zeeMarathiHD">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3 mb-3">
+                <div class="card" style="width: auto;">
+                    <img src="..." class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Star Pravah HD</h5>
+                        <h6 class="card-title">&#8377; 14</h6>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="Star Pravah HD" id="starPravahHD" name="starPravahHD">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3 mb-3">
+                <div class="card" style="width: auto;">
+                    <img src="..." class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Zee Talkies HD</h5>
+                        <h6 class="card-title">&#8377; 15</h6>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="Zee Talkies HD" id="zeeTalkiesHD" name="zeeTalkiesHD">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3 mb-3">
+                <div class="card" style="width: auto;">
+                    <img src="..." class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Colors Marathi HD</h5>
+                        <h6 class="card-title">&#8377; 17</h6>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="Colors Marathi HD" id="colorsMarathiHD" name="colorsMarathiHD">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div>Hindi Movies</div>
+        <div class="row">
+            <div class="col-3 mb-3">
+                <div class="card" style="width: auto;">
+                    <img src="..." class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Star Gold HD</h5>
+                        <h6 class="card-title">&#8377; 19</h6>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="Star Gold HD" id="starGoldHD" name="starGoldHD">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3 mb-3">
+                <div class="card" style="width: auto;">
+                    <img src="..." class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Set Max HD</h5>
+                        <h6 class="card-title">&#8377; 20</h6>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="Set Max HD" id="setMaxHD" name="setMaxHD">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3 mb-3">
+                <div class="card" style="width: auto;">
+                    <img src="..." class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Zee Cinema HD</h5>
+                        <h6 class="card-title">&#8377; 15</h6>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="Zee Cinema HD" id="zeeCinemaHD" name="zeeCinemaHD">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3 mb-3">
+                <div class="card" style="width: auto;">
+                    <img src="..." class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">& Pictures HD</h5>
+                        <h6 class="card-title">&#8377; 19</h6>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="& Pictures HD" id="&PicturesHD" name="&PicturesHD">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div>English Movies</div>
+        <div class="row">
+            <div class="col-3 mb-3">
+                <div class="card" style="width: auto;">
+                    <img src="..." class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Star World HD</h5>
+                        <h6 class="card-title">&#8377; 21</h6>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="Star World HD" id="starWorldHD" name="starWorldHD">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3 mb-3">
+                <div class="card" style="width: auto;">
+                    <img src="..." class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Sony Pix HD</h5>
+                        <h6 class="card-title">&#8377; 22</h6>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="Sony Pix HD" id="sonyPixHD" name="sonyPixHD">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3 mb-3">
+                <div class="card" style="width: auto;">
+                    <img src="..." class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Movies Now HD</h5>
+                        <h6 class="card-title">&#8377; 25</h6>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="Movies Now HD" id="moviesNowHD" name="moviesNowHD">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3 mb-3">
+                <div class="card" style="width: auto;">
+                    <img src="..." class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">& Flix HD</h5>
+                        <h6 class="card-title">&#8377; 20</h6>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="& Flix HD" id="&FlixHD" name="&FlixHD">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button type="submit" class="btn btn-primary">Recharge</button>
+    </form>
+</div>
 {% endblock %}
