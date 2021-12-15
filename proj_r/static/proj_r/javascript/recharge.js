@@ -28,13 +28,16 @@ function check(e){
     let element = document.getElementById(e.target.id);
     let total_block = document.getElementById("total_block");
     let total_outer = document.getElementById("total_outer");
+    let total_val = document.getElementById("total_value");
     if (element.checked == true){
         total_outer.style.display = "block";
         total += rates[element.id];
         total_block.innerHTML = `${total}`;
+        total_val.value = `${total}`;
     }
     else {
         total -= rates[element.id];
         total_block.innerHTML = `${total}`;
+        total_val.value = `${total}`;
     }
 }
