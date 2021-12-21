@@ -11,13 +11,14 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap" rel="stylesheet">
+    {% load static %}
+    <link rel="shortcut icon" href="{% static 'proj_r/images/logo.png' %}" type="image/x-icon">
     {% block css %}
     {% endblock %}
 </head>
 <body>
     <nav class="navbar navbar-light bg-danger" style="position: sticky; top: 0; z-index: 1;">
         <div class="container-fluid">
-          {% load static %}
           <a class="navbar-brand mb-0 h1" style="font-family: 'Montserrat', sans-serif;">
             <img src="{% static 'proj_r/images/logo.png' %}" style="height: 5.5rem;">
             <img src="{% static 'proj_r/images/logotext.png' %}" alt="logo2"b style="height: 3rem;">
